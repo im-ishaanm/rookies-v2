@@ -99,15 +99,13 @@ body {
 
 #text {
     color: #00a8ff;
-    vertical-align: middle;
     display: inline-block;
 }
 
 #cursor {
     display: inline-block;
-    vertical-align: middle;
     width: 2px;
-    height: 32px;
+    height: 26px;
     background: #00a8ff;
     animation: blink .75s step-end infinite;
     margin-left: -8px;
