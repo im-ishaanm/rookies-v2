@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-div {
+    height: 100vh;
+    background-image: url('./images/hero-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    z-index: 0;
+}
+
+.hero-div-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.hero-nav-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-nav-div h1 {
+    color: white;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background: transparent;
+    width: 0;
+    height: 2px;
+    transition: width .5s ease, background .5s ease, left .5s ease-out;
+}
+
+.get-started-btn {
+    color: #00a8ff;
+    text-decoration: none;
+    background: transparent;
+    padding: 8px 12px;
+    border: 2px solid #00a8ff;
+    border-radius: 40px;
+    transition: color .2s ease, background .2s ease, font-weight .2s ease;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    letter-spacing: 1.2px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.2em;
+}
+
+#rookies-blue-hero {
+    color: #00a8ff;
+}
+
+#text {
+    color: #00a8ff;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2px;
+    height: 32px;
+    background: #00a8ff;
+    animation: blink .75s step-end infinite;
+    margin-left: -8px;
+}
+
+
+
+
+
+
+
+/* Hover Effects and Animations */
+
+.nav-links li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+.get-started-btn:hover {
+    color: white;
+    background: #00a8ff;
+    font-weight: bold;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: #00a8ff;
+    }
+}
